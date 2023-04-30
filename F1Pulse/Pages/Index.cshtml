@@ -1,0 +1,21 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+    Layout = null;
+}
+
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
+
+<div class="vh-100 d-flex justify-content-center align-items-center ">
+    <div class="text-center">
+        <form asp-page="/Stats/Menu">
+            <button type="submit" class="btn btn-outline-danger">Stats</button>
+        </form>
+        <form asp-page="/News/Menu">
+            <button type="submit" class="btn btn-outline-danger">News</button>
+        </form>
+    </div>
+</div>
+
+

@@ -1,0 +1,31 @@
+﻿@page
+@model F1Pulse.Pages.Stats.LapsModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>  
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-moment@0.1.1"></script>
+</head>
+<body>
+<div class="border vh-100 ">
+    <select id="round" asp-for="Input.Round" asp-items="Model.RoundList"></select>
+    <select id="year" asp-for="Input.Year" asp-items="Model.YearList"></select>
+    <button type="submit" name="action" class="btn btn-primary">Submit</button>
+
+    <div class="m-5 border" style="width: 1400px; height: 600px">
+        <canvas id="lap-times-chart"></canvas>
+    </div>
+</div>
+</body>
+<script src="~/js/Stats/Laps.js"></script>
+</html>     
