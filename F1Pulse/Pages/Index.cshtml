@@ -9,12 +9,8 @@
 
 <div class="vh-100 d-flex justify-content-center align-items-center ">
     <div class="text-center">
-        <form asp-page="/Stats/Menu">
-            <button type="submit" class="btn btn-outline-danger">Stats</button>
-        </form>
-        <form asp-page="/News/Menu">
-            <button type="submit" class="btn btn-outline-danger">News</button>
-        </form>
+        <a asp-page="/News/Menu"  asp-route-year="@DateTime.Today.Year" asp-route-month="@DateTime.Today.Month" asp-route-day="@DateTime.Today.Day">News</a>
+        <a asp-page="/Stats/Menu">Stats</a>
     </div>
 </div>
 

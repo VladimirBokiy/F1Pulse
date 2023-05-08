@@ -1,5 +1,5 @@
-﻿@page
-@model F1Pulse.Pages.News.MenuModel
+﻿@page "{year}/{month}/{day}"
+@model F1Pulse.Pages.NewsModel
 
 @{
     Layout = null;
@@ -10,10 +10,26 @@
 <html>
 <head>
     <title></title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>  
+    <link rel="stylesheet" href="~/css/News/Menu.css"/>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-moment@0.1.1"></script>
 </head>
 <body>
-<div>
-    <p>News</p>
-</div>
+@foreach (var news in Model.NewsList)
+{
+    <div class="article">
+        <div class="article_image">
+            <a href=@news.ImageLink class="b-article__figure">
+                <img src=@news.ImageLink alt=@news.Preview class="b-article__image" width="145" height="108"/>
+            </a>
+        </div>
+        <div class="article_main">
+            
+        </div>
+    </div>
+}
 </body>
 </html>

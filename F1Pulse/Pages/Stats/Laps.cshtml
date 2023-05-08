@@ -18,9 +18,8 @@
 </head>
 <body>
 <div class="border vh-100 ">
-    <select id="round" asp-for="Input.Round" asp-items="Model.RoundList"></select>
     <select id="year" asp-for="Input.Year" asp-items="Model.YearList"></select>
-    <button type="submit" name="action" class="btn btn-primary">Submit</button>
+    <select id="round" asp-for="Input.Round" asp-items="Model.RoundList"></select>
 
     <div class="m-5 border" style="width: 1400px; height: 600px">
         <canvas id="lap-times-chart"></canvas>
