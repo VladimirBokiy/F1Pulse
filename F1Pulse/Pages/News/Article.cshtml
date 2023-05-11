@@ -1,0 +1,26 @@
+﻿@page "{id}"
+@model F1Pulse.Pages.ArticleModel
+
+
+<div class="article_body shadow">
+    <div class="article_title">
+        <p>@Model.News.Title</p>
+    </div>
+    <div class="post_date">
+        <p>@Model.News.PostDate</p>
+    </div>
+    <div class="article_image">
+        <img src="@Model.News.ImageLink" alt="Img"/>
+    </div>
+    @foreach (var p in Model.News.Content)
+    {
+        <div class="statement">
+            <p>@p</p>
+        </div>
+        
+    }
+</div>
+@section Scripts
+{
+    <link rel="stylesheet" href="~/css/News/Article.css"/>
+}

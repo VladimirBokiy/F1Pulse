@@ -1,35 +1,43 @@
 ﻿@page "{year}/{month}/{day}"
 @model F1Pulse.Pages.NewsModel
 
-@{
-    Layout = null;
-}
 
-<!DOCTYPE html>
 
-<html>
-<head>
-    <title></title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>  
-    <link rel="stylesheet" href="~/css/News/Menu.css"/>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-moment@0.1.1"></script>
-</head>
-<body>
+<form method="get">
+    <div class="form_search">
+        <div class="input-group">
+            <input class="form-control" asp-for="Input.Day"/>
+            <input class="form-control" asp-for="Input.Month"/>
+            <input class="form-control" asp-for="Input.Year"/>
+            <button class="btn-danger" type="submit">Поиск</button>
+        </div>
+    </div>
+</form>
+
 @foreach (var news in Model.NewsList)
 {
-    <div class="article">
+    
+    <div class="article shadow">
         <div class="article_image">
-            <a href=@news.ImageLink class="b-article__figure">
-                <img src=@news.ImageLink alt=@news.Preview class="b-article__image" width="145" height="108"/>
+            <a asp-page="/News/Article" asp-route-id="@news.FullContentLink.Split(new char[] { '-', '.' })[3]" class="b-article__figure">
+                <img src=@news.ImageLink alt=@news.Preview class="b-article__image"/>
             </a>
         </div>
         <div class="article_main">
-            
+            <div class="article_title">
+                <a asp-page="/News/Article" asp-route-id="@news.FullContentLink.Split(new char[] { '-', '.' })[3]">
+                    <span>@news.PostDate</span>
+                    @news.Title
+                </a>
+            </div>
+            <div class="article_content">
+                @news.Preview
+            </div>
         </div>
     </div>
+
 }
-</body>
-</html>
+@section Scripts
+{
+    <link rel="stylesheet" href="~/css/News/Menu.css"/>
+}

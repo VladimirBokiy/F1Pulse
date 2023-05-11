@@ -1,0 +1,37 @@
+﻿.article_body{
+    margin: 5% 10%;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.article_title{
+    font-size: 24px;
+    font-weight: 700;
+    font-family: "PT Serif",Georgia,serif;
+    line-height: 28px;
+    margin: 5% 5% 0;
+}
+
+.post_date{
+    font-family: Arial,Helvetica,sans-serif;
+    margin-bottom: 5px;
+    color: #afafaf;
+    font-size: 12px;
+    line-height: 12px;
+    text-transform: uppercase;
+    margin-left: 5%;
+}
+
+.article_image{
+    margin: auto;
+    margin-bottom: 2%;
+}
+
+.statement{
+    margin: 0 2%;
+    font: 16px "PT Serif",Georgia,serif;
+    line-height: normal;
+}
+
