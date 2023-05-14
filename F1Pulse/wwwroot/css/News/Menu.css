@@ -1,9 +1,14 @@
-﻿.article{
+﻿.page_content{
+    background-color: white;
+}
+
+.article{
     font-family: Arial;
     margin: 3% 2%;
     display: flex;
     flex-direction: row;
     border-radius: 10px;
+    box-shadow: 0 .5rem 1rem rgba(239, 21, 21, 0.73);
 }
 
 .article_image{

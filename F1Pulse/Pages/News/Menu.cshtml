@@ -2,41 +2,43 @@
 @model F1Pulse.Pages.NewsModel
 
 
-
-<form method="get">
-    <div class="form_search">
-        <div class="input-group">
-            <input class="form-control" asp-for="Input.Day"/>
-            <input class="form-control" asp-for="Input.Month"/>
-            <input class="form-control" asp-for="Input.Year"/>
-            <button class="btn-danger" type="submit">Поиск</button>
+<div class="page_content">
+    <form method="post">
+        <div class="form_search">
+            <div class="input-group">
+                <input class="form-control" asp-for="Input.Day"/>
+                <input class="form-control" asp-for="Input.Month"/>
+                <input class="form-control" asp-for="Input.Year"/>
+                <button class="btn-danger" type="submit">Поиск</button>
+            </div>
         </div>
-    </div>
-</form>
-
-@foreach (var news in Model.NewsList)
-{
+    </form>
     
-    <div class="article shadow">
-        <div class="article_image">
-            <a asp-page="/News/Article" asp-route-id="@news.FullContentLink.Split(new char[] { '-', '.' })[3]" class="b-article__figure">
-                <img src=@news.ImageLink alt=@news.Preview class="b-article__image"/>
-            </a>
-        </div>
-        <div class="article_main">
-            <div class="article_title">
-                <a asp-page="/News/Article" asp-route-id="@news.FullContentLink.Split(new char[] { '-', '.' })[3]">
-                    <span>@news.PostDate</span>
-                    @news.Title
+    @foreach (var news in Model.NewsList)
+    {
+        
+        <div class="article shadow">
+            <div class="article_image">
+                <a asp-page="/News/Article" asp-route-id="@news.FullContentLink.Split(new char[] { '-', '.' })[3]" class="b-article__figure">
+                    <img src=@news.ImageLink alt=@news.Preview class="b-article__image"/>
                 </a>
             </div>
-            <div class="article_content">
-                @news.Preview
+            <div class="article_main">
+                <div class="article_title">
+                    <a asp-page="/News/Article" asp-route-id="@news.FullContentLink.Split(new char[] { '-', '.' })[3]">
+                        <span>@news.PostDate</span>
+                        @news.Title
+                    </a>
+                </div>
+                <div class="article_content">
+                    @news.Preview
+                </div>
             </div>
         </div>
-    </div>
+    
+    }
+</div>
 
-}
 @section Scripts
 {
     <link rel="stylesheet" href="~/css/News/Menu.css"/>

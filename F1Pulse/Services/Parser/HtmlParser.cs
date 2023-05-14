@@ -100,7 +100,7 @@ public class HtmlParser
         
         HtmlWeb fullHtmlWeb = new HtmlWeb();
         HtmlDocument fullNews = fullHtmlWeb.Load("https://www.f1news.ru/news/f1-" + id + ".html");
-        Console.WriteLine("https://www.f1news.ru/news/f1-" + id + ".html");
+        //Console.WriteLine("https://www.f1news.ru/news/f1-" + id + ".html");
         
         news.PostDate = fullNews.DocumentNode.Descendants("div")
             .First(n => n.Attributes["class"] != null &&

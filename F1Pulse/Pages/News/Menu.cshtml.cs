@@ -27,8 +27,6 @@ public class NewsModel : PageModel
 
     public IActionResult OnPost()
     {
-        Console.WriteLine(Input.Day + " " + Input.Month + " " + Input.Year);
-
         return RedirectToPage("/News/Menu", new { year = Input.Year, month = Input.Month, day = Input.Day });
     }
 
