@@ -12,7 +12,10 @@ public class IndexModel : PageModel
         _logger = logger;
     }
 
-    public void OnGet()
+    public IActionResult OnGet()
     {
+        return RedirectToPage("/News/Menu", new { year = DateTime.Today.Year, 
+            month = DateTime.Today.Month, 
+            day = DateTime.Today.Day });
     }
 }

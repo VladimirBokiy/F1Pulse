@@ -10,6 +10,9 @@
         options: {
             plugins: {
                 legend: {
+                    labels: {
+                        hidden: true
+                    },
                     position: 'bottom'
                 }
             },
@@ -21,23 +24,6 @@
                     title: {
                         display: true,
                         text: 'Lap'
-                    }
-                },
-                y: {
-                    type: 'time',
-                    time: {
-                        parser: 'mm:ss.SSS',
-                        unit: "seconds",
-                        tooltipFormat: 'mm:ss.SSS',
-                        displayFormats: {
-                            'seconds': "mm:ss.SSS"
-                        },
-                    },
-                    min: '00:00.000',
-                    display: true,
-                    title: {
-                        display: true,
-                        text: 'Time'
                     }
                 }
             }
@@ -80,8 +66,8 @@
                             fill: false
                         };
                     }
-                    let timeString = timing.time;
-                    drivers[driver].data.push(timeString);
+                    let position = timing.position;
+                    drivers[driver].data.push(position);
                     if (chart.data.labels.indexOf(lap.number) == -1) {
                         chart.data.labels.push(lap.number);
                     }
@@ -92,42 +78,6 @@
             $.each(drivers, function (i, driver) {
                 chart.data.datasets.push(driver);
             });
-
-            function findMinMaxTimes() {
-                let minTime = Infinity;
-                let maxTime = -Infinity;
-                const drivers = chart.data.datasets;
-                for (let i = 0; i < drivers.length; i++) {
-                  const times = drivers[i].data;
-                  for (let j = 0; j < times.length; j++) {
-                    const timeString = times[j];
-                    const timeParts = timeString.split(":");
-                    const minutes = parseInt(timeParts[0]);
-                    const seconds = parseFloat(timeParts[1]);
-                    const time = minutes * 60 + seconds;
-                    if (time < minTime) {
-                      minTime = time;
-                    }
-                    if (time > maxTime) {
-                      maxTime = time;
-                    }
-                  }
-                }
-                const minTimeMinutes = Math.floor(minTime / 60);
-                const minTimeSeconds = (minTime % 60).toFixed(3);
-                const maxTimeMinutes = Math.floor(maxTime / 60);
-                const maxTimeSeconds = (maxTime % 60).toFixed(3);
-                const formattedMinTime = `${minTimeMinutes}:${minTimeSeconds.padStart(6, '0')}`;
-                const formattedMaxTime = `${maxTimeMinutes}:${maxTimeSeconds.padStart(6, '0')}`;
-                return { formattedMinTime, formattedMaxTime };
-              }
-        
-            
-            console.log('Minimum time:', findMinMaxTimes().formattedMinTime);
-            console.log('Maximum time:', findMinMaxTimes().formattedMaxTime);
-
-            chart.options.scales.y.min = findMinMaxTimes().formattedMinTime;
-            chart.options.scales.y.max = findMinMaxTimes().formattedMaxTime;
 
             console.log(chart.data.datasets)
             chart.update();

@@ -1,14 +1,11 @@
-﻿using System.Text.Json;
-using System.Text.Json.Serialization;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
+﻿using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace F1Pulse.Pages.Stats;
 
-public class LapsModel : PageModel
+public class LapPositionsModel : PageModel
 {
-    public LapsModel()
+    public LapPositionsModel()
     {
         List<SelectListItem> yearList = new List<SelectListItem>();
         for (int i = 2023; i >= 1996; i--)
@@ -35,5 +32,4 @@ public class LapsModel : PageModel
         public string Year { get; set; }
         public string Round { get; set; }
     }
-
 }

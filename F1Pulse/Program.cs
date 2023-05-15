@@ -1,4 +1,5 @@
 using F1Pulse.Data;
+using F1Pulse.Services.Parser;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 
@@ -14,6 +15,8 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 builder.Services.AddDefaultIdentity<ApplicationUser>(options =>
         options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<AppDbContext>();
+
+builder.Services.AddScoped<HtmlParser>();
 
 var app = builder.Build();
 
