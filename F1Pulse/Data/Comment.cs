@@ -13,7 +13,6 @@ public class Comment
     public virtual ApplicationUser? ApplicationUser { get; set; }
     [Required]
     public string NewsId { get; set; }
-
     [Required]
     public DateTime CommentDate { get; set; }
     [Required]

@@ -26,7 +26,7 @@
 </div>
 @if (SignInManager.IsSignedIn(User))
 {
-    <form method="post">
+    <form method="post" class="comment_form">
         <input type="hidden" asp-for="Input.Id" value="@RouteData.Values["id"]" />
         <label class="form-label" asp-for="Input.Comment"></label>
         <input class="form-control" asp-for="Input.Comment"/>
@@ -40,7 +40,7 @@
     }
     @foreach (var c in Model.Comments)
     {
-        <div class="comment shadow">
+        <div class="comment shadow-sm">
             <div class="comment_info">
                 <div class="comment_date">
                     <p>@c.CommentDate</p>

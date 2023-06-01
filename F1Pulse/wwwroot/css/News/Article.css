@@ -37,9 +37,18 @@
     line-height: 24px;
 }
 
+.comment_form{
+    margin: 5% 10%;
+}
+
+.comments_body{
+    margin: 5% 10%;
+}
+
 .comment{
     border-radius: 10px;
     padding: 5px;
+    margin-top: 5%;
 }
 
 .comment_info{

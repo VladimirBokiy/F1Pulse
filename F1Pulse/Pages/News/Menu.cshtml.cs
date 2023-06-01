@@ -1,4 +1,5 @@
-﻿using F1Pulse.Services.Parser;
+﻿using System.ComponentModel.DataAnnotations;
+using F1Pulse.Services.Parser;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -32,8 +33,11 @@ public class NewsModel : PageModel
 
     public class InputModel
     {
+        [Display(Name = "Year")]
         public int Year { get; set; } = DateTime.Today.Year;
+        [Display(Name = "Month")]
         public int Month { get; set; } = DateTime.Today.Month;
+        [Display(Name = "Day")]
         public int Day { get; set; } = DateTime.Today.Day;
     }
 }

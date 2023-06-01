@@ -100,27 +100,24 @@ public class HtmlParser
         
         HtmlWeb fullHtmlWeb = new HtmlWeb();
         HtmlDocument fullNews = fullHtmlWeb.Load("https://www.f1news.ru/news/f1-" + id + ".html");
-        //Console.WriteLine("https://www.f1news.ru/news/f1-" + id + ".html");
-        
+
         news.PostDate = fullNews.DocumentNode.Descendants("div")
             .First(n => n.Attributes["class"] != null &&
                         n.Attributes["class"].Value.Equals("post_date"))
             .InnerText;
-        //Console.WriteLine(news.PostDate);
 
         news.Title = fullNews.DocumentNode.Descendants("div")
             .First(n => n.Attributes["class"] != null &&
                         n.Attributes["class"].Value.Equals("post_head"))
             .Element("h1")
             .InnerText;
-        //Console.WriteLine(news.Title);
 
         foreach (var p in fullNews.DocumentNode.Descendants("div")
                      .First(n => n.Attributes["class"] != null &&
                                  n.Attributes["class"].Value.Equals("post_content"))
                      .Elements("p"))
         {
-            news.Content.Add(p.InnerText);
+            news.Content.Add(System.Net.WebUtility.HtmlDecode(p.InnerText));
         }
         
         news.ImageLink = fullNews.DocumentNode.Descendants("div")

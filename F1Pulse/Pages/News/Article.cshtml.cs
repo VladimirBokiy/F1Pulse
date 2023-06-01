@@ -33,6 +33,11 @@ public class ArticleModel : PageModel
         Comments = _context.Comments
             .Include(c => c.ApplicationUser)
             .Where(c => c.NewsId.Equals(Input.Id)).ToList();
+        Comments.Reverse();
+        foreach (var c in Comments)
+        {
+            c.ApplicationUser = _context.Users.First(u => u.Id == c.UserId);
+        }
     }
 
     public void OnPost()
@@ -48,6 +53,11 @@ public class ArticleModel : PageModel
         _context.SaveChanges();
 
         Comments = _context.Comments.Where(c => c.NewsId.Equals(Input.Id)).ToList();
+        Comments.Reverse();
+        foreach (var c in Comments)
+        {
+            c.ApplicationUser = _context.Users.First(u => u.Id == c.UserId);
+        }
     }
 
     public class InputModel

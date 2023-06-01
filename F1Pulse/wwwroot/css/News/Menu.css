@@ -67,6 +67,9 @@
 
 .form_search{
     margin: 5% 5%;
-    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end;
 }
 

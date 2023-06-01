@@ -5,12 +5,19 @@
 <div class="page_content">
     <form method="post">
         <div class="form_search">
-            <div class="input-group">
+            <div>
+                <label class="form-label" asp-for="Input.Day"></label>
                 <input class="form-control" asp-for="Input.Day"/>
-                <input class="form-control" asp-for="Input.Month"/>
-                <input class="form-control" asp-for="Input.Year"/>
-                <button class="btn-danger" type="submit">Поиск</button>
             </div>
+            <div>
+                <label class="form-label" asp-for="Input.Month"></label>
+                <input class="form-control" asp-for="Input.Month"/>
+            </div>
+            <div>
+                <label class="form-label" asp-for="Input.Year"></label>
+                <input class="form-control" asp-for="Input.Year"/>
+            </div>
+            <button class="btn btn-danger" type="submit">Поиск</button>
         </div>
     </form>
     
