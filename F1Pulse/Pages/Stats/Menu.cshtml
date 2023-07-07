@@ -1,0 +1,26 @@
+﻿@page
+@model F1Pulse.Pages.Stats.MenuModel
+
+
+
+<div class="vh-100">
+    <div class="choice_area text-center ">
+        <form asp-page="/Stats/LapTimes">
+            <button type="submit" class="btn btn-outline-danger" style="font-family: Bahnschrift">Lap Times</button>
+        </form>
+        <form asp-page="/Stats/LapPositions">
+            <button type="submit" class="btn btn-outline-danger" style="font-family: Bahnschrift">Lap Positions</button>
+        </form>
+        <form asp-page="/Stats/DriverStandings">
+            <button type="submit" class="btn btn-outline-danger" style="font-family: Bahnschrift">Driver Standings</button>
+        </form>
+        <form asp-page="/Stats/ConstructorStandings">
+            <button type="submit" class="btn btn-outline-danger" style="font-family: Bahnschrift">Constructor Standings</button>
+        </form>
+    </div>
+</div>
+
+@section Scripts
+{
+    <link rel="stylesheet" href="~/css/Stats/Menu.css"/>
+}

@@ -1,0 +1,64 @@
+﻿@page "{id}"
+@using F1Pulse.Data
+@using Microsoft.AspNetCore.Identity
+@model F1Pulse.Pages.ArticleModel
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+<div class="article_body shadow">
+    <div class="article_title">
+        <p>@Model.News.Title</p>
+    </div>
+    <div class="post_date">
+        <p>@Model.News.PostDate</p>
+    </div>
+    <div class="article_image">
+        <img src="@Model.News.ImageLink" alt="Img"/>
+    </div>
+    @foreach (var p in Model.News.Content)
+    {
+        <div class="statement">
+            <p>@p</p>
+        </div>
+        
+    }
+</div>
+@if (SignInManager.IsSignedIn(User))
+{
+    <form method="post" class="comment_form">
+        <input type="hidden" asp-for="Input.Id" value="@RouteData.Values["id"]" />
+        <label class="form-label" asp-for="Input.Comment"></label>
+        <input class="form-control" asp-for="Input.Comment"/>
+        <input class="btn" type="submit" value="Отправить"/>
+    </form>
+}
+<div class="comments_body">
+    @if (Model.Comments.Count != 0)
+    {
+        <h1 style="text-align: center; font-family: Arial, Helvetica, sans-serif;font-size: 24px; font-weight: 700;">Комментарии</h1>
+    }
+    @foreach (var c in Model.Comments)
+    {
+        <div class="comment shadow-sm">
+            <div class="comment_info">
+                <div class="comment_date">
+                    <p>@c.CommentDate</p>
+                </div>
+                <div class="commentator">
+                    @if (c.ApplicationUser != null)
+                    {
+                        <p>@c.ApplicationUser.FirstName</p>
+                    }
+                </div>
+            </div>
+            <div class="comment_data">
+                <p>@c.Content</p>
+            </div>
+        </div>
+    }
+</div>
+@section Scripts
+{
+    <link rel="stylesheet" href="~/css/News/Article.css"/>
+}

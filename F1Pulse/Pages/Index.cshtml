@@ -1,0 +1,16 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
+
+<div class="vh-100 d-flex justify-content-center align-items-center ">
+    <div class="text-center">
+        <a asp-page="/News/Menu" asp-route-year="@DateTime.Today.Year" asp-route-month="@DateTime.Today.Month" asp-route-day="@DateTime.Today.Day">News</a>
+        <a asp-page="/Stats/Menu">Stats</a>
+    </div>
+</div>
+
+

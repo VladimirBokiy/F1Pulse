@@ -1,0 +1,52 @@
+﻿@page "{year}/{month}/{day}"
+@model F1Pulse.Pages.NewsModel
+
+
+<div class="page_content">
+    <form method="post">
+        <div class="form_search">
+            <div>
+                <label class="form-label" asp-for="Input.Day"></label>
+                <input class="form-control" asp-for="Input.Day"/>
+            </div>
+            <div>
+                <label class="form-label" asp-for="Input.Month"></label>
+                <input class="form-control" asp-for="Input.Month"/>
+            </div>
+            <div>
+                <label class="form-label" asp-for="Input.Year"></label>
+                <input class="form-control" asp-for="Input.Year"/>
+            </div>
+            <button class="btn btn-danger" type="submit">Поиск</button>
+        </div>
+    </form>
+    
+    @foreach (var news in Model.NewsList)
+    {
+        
+        <div class="article shadow">
+            <div class="article_image">
+                <a asp-page="/News/Article" asp-route-id="@news.FullContentLink.Split(new char[] { '-', '.' })[3]" class="b-article__figure">
+                    <img src=@news.ImageLink alt=@news.Preview class="b-article__image"/>
+                </a>
+            </div>
+            <div class="article_main">
+                <div class="article_title">
+                    <a asp-page="/News/Article" asp-route-id="@news.FullContentLink.Split(new char[] { '-', '.' })[3]">
+                        <span>@news.PostDate</span>
+                        @news.Title
+                    </a>
+                </div>
+                <div class="article_content">
+                    @news.Preview
+                </div>
+            </div>
+        </div>
+    
+    }
+</div>
+
+@section Scripts
+{
+    <link rel="stylesheet" href="~/css/News/Menu.css"/>
+}

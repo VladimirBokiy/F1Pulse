@@ -1,0 +1,6 @@
+﻿.choice_area{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 80%;
+}
