@@ -1,0 +1,17 @@
+﻿@page
+@model F1Pulse.Pages.Stats.ConstructorStandingsModel
+
+<div class="vh-100 ">
+    <div class="choice_area">
+        <select class="form-select" id="year" asp-for="Input.Year" asp-items="Model.YearList"></select>
+    </div>
+
+    <div class="m-5 " style="position: relative; height:65vh; width:80vw">
+        <canvas id="constructor-standings-chart"></canvas>
+    </div>
+</div>
+@section Scripts
+{
+    <script src="~/js/Stats/ConstructorStandings.js"></script>
+    <link rel="stylesheet" href="~/css/Stats/ConstructorStandings.css"/>
+}
