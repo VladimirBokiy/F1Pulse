@@ -70,13 +70,15 @@
                     drivers[driver].data.push(position);
                     if (chart.data.labels.indexOf(lap.number) == -1) {
                         chart.data.labels.push(lap.number);
-                    }   
+                    }
                 })
+
             });
             chart.data.datasets = [];
             $.each(drivers, function (i, driver) {
                 chart.data.datasets.push(driver);
             });
+
             console.log(chart.data.datasets)
             chart.update();
         });
