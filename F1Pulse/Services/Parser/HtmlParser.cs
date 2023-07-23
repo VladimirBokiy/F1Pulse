@@ -120,7 +120,7 @@ public class HtmlParser
                                  n.Attributes["class"].Value.Equals("post_content"))
                      .Elements("p"))
         {
-            news.Content.Add(p.InnerText);
+            news.Content.Add(System.Net.WebUtility.HtmlDecode(p.InnerText));
         }
         
         news.ImageLink = fullNews.DocumentNode.Descendants("div")
