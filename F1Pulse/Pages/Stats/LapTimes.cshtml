@@ -2,14 +2,13 @@
 @model F1Pulse.Pages.Stats.LapTimesModel
 
 <div class="vh-100 ">
-    <div class="choice_area">
+    <div class="choice-area">
         <select class="form-select" id="year" asp-for="Input.Year" asp-items="Model.YearList"></select>
         <select class="form-select" id="round" asp-for="Input.Round" asp-items="Model.RoundList"></select>
     </div>
-
-    <div class="m-5 " style="position: relative; height:65vh; width:80vw">
-        <canvas id="lap-times-chart"></canvas>
-    </div>
+    
+    <canvas id="lap-times-chart" style="margin: 5%"></canvas>
+    
 </div>
 @section Scripts
 {

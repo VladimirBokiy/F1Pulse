@@ -2,13 +2,13 @@
 @model F1Pulse.Pages.Stats.DriverStandingsModel
 
 <div class="vh-100 ">
-    <div class="choice_area">
+    <div class="choice-area">
         <select class="form-select" id="year" asp-for="Input.Year" asp-items="Model.YearList"></select>
     </div>
 
-    <div class="m-5 " style="position: relative; height:65vh; width:80vw">
-        <canvas id="driver-standings-chart"></canvas>
-    </div>
+
+    <canvas id="driver-standings-chart" style="margin: 5%"></canvas>
+
 </div>
 @section Scripts
 {
