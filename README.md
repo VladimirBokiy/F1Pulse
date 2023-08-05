@@ -13,6 +13,8 @@ F1Pulse is a web application for Formula 1 fans that allows user to read news an
 
 - The Application itself is developed using **ASP.NET Core** and **.NET 6**
 
+- As a visualisation tool, a popular charting JavaScript library [Chart.js](https://github.com/chartjs/Chart.js) is chosen.
+
 - For news parsing [Html Agility Pack](https://html-agility-pack.net/) is used. It is a .NET code library that allows you to parse "out of the web" HTML files.
 
 - For users' authentification [ASP.NET Core Identity](https://github.com/dotnet/aspnetcore/tree/main/src/Identity) is used. ASP.NET Core Identity is the membership system for building ASP.NET Core web applications, including membership, login, and user data.
