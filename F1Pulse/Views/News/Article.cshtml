@@ -1,10 +1,8 @@
 ﻿@page "{id}"
 @using F1Pulse.Data
 @using Microsoft.AspNetCore.Identity
-@model F1Pulse.Pages.ArticleModel
+@model F1Pulse.Models.News.ArticleModel
 
-@inject SignInManager<ApplicationUser> SignInManager
-@inject UserManager<ApplicationUser> UserManager
 
 <div class="article_body shadow">
     <div class="article_title">
@@ -24,15 +22,7 @@
         
     }
 </div>
-@if (SignInManager.IsSignedIn(User))
-{
-    <form method="post">
-        <input type="hidden" asp-for="Input.Id" value="@RouteData.Values["id"]" />
-        <label class="form-label" asp-for="Input.Comment"></label>
-        <input class="form-control" asp-for="Input.Comment"/>
-        <input class="btn" type="submit" value="Отправить"/>
-    </form>
-}
+
 <div class="comments_body">
     @if (Model.Comments.Count != 0)
     {

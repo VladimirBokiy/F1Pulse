@@ -11,7 +11,7 @@ build_property.RootNamespace = F1Pulse
 build_property.ProjectDir = C:\Users\Vladimir\Desktop\F1Pulse MVC\F1Pulse\F1Pulse\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
-build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
 build_property.MSBuildProjectDirectory = C:\Users\Vladimir\Desktop\F1Pulse MVC\F1Pulse\F1Pulse
 build_property._RazorSourceGeneratorDebug = 
 
@@ -25,6 +25,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Vladimir/Desktop/F1Pulse MVC/F1Pulse/F1Pulse/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vladimir/Desktop/F1Pulse MVC/F1Pulse/F1Pulse/Views/News/Article.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV3c1xBcnRpY2xlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vladimir/Desktop/F1Pulse MVC/F1Pulse/F1Pulse/Views/News/Menu.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV3c1xNZW51LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Vladimir/Desktop/F1Pulse MVC/F1Pulse/F1Pulse/Views/Shared/Error.cshtml]

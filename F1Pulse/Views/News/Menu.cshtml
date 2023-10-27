@@ -1,19 +1,17 @@
-﻿@page "{year}/{month}/{day}"
-@model F1Pulse.Pages.NewsModel
-
+﻿@model F1Pulse.Models.News.MenuModel
 
 <div class="page_content">
     <form method="post">
         <div class="form_search">
             <div class="input-group">
-                <input class="form-control" asp-for="Input.Day"/>
-                <input class="form-control" asp-for="Input.Month"/>
-                <input class="form-control" asp-for="Input.Year"/>
+                <input class="form-control" asp-for="Day"/>
+                <input class="form-control" asp-for="Month"/>
+                <input class="form-control" asp-for="Year"/>
                 <button class="btn-danger" type="submit">Поиск</button>
             </div>
         </div>
     </form>
-    
+    <p>@Model.NewsList.Count</p>
     @foreach (var news in Model.NewsList)
     {
         

@@ -12,10 +12,11 @@ public class HomeController : Controller
     {
         _logger = logger;
     }
-
+    
+    
     public IActionResult Index()
     {
-        return View();
+        return RedirectToAction("Menu", "News");
     }
 
     public IActionResult Privacy()
