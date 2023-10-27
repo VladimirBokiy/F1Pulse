@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace F1Pulse.Controllers;
-[Route("News")]
+[Route("News/")]
 public class NewsController : Controller
 {
     private readonly HtmlParser _htmlParser;
@@ -24,6 +24,8 @@ public class NewsController : Controller
         _htmlParser.Year = model.Year = Convert.ToInt32(RouteData.Values["month"]);
         _htmlParser.Month = model.Month = Convert.ToInt32(RouteData.Values["year"]);
         Console.WriteLine(RouteData.Values["day"]);
+        Console.WriteLine(_htmlParser.Day);
+        Console.WriteLine(model.Day);
         model.NewsList = _htmlParser.GetNewsList();
         Console.WriteLine("News found: " + model.NewsList.Count);
         

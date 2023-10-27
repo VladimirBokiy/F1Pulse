@@ -72,8 +72,7 @@ public class HtmlParser
 
             news.Title = fullNews.DocumentNode.Descendants("div")
                 .First(n => n.Attributes["class"] != null &&
-                            n.Attributes["class"].Value.Equals("post_head"))
-                .Element("h1")
+                            n.Attributes["class"].Value.Equals("article_title"))
                 .InnerText;
             //Console.WriteLine(news.Title);
 
@@ -108,10 +107,9 @@ public class HtmlParser
             .InnerText;
         //Console.WriteLine(news.PostDate);
 
-        news.Title = fullNews.DocumentNode.Descendants("div")
-            .First(n => n.Attributes["class"] != null &&
-                        n.Attributes["class"].Value.Equals("post_head"))
-            .Element("h1")
+        news.Title = fullNews.DocumentNode.Descendants("h1")
+            .First(n => 
+                        n.Attributes["class"].Value.Equals("post_title"))
             .InnerText;
         //Console.WriteLine(news.Title);
 
@@ -134,5 +132,22 @@ public class HtmlParser
         }
 
         return news;
+    }
+}
+
+public class Program
+{
+    public static void Main()
+    {
+        HtmlParser parser = new HtmlParser();
+        parser.Day = 27;
+        parser.Month = 10;
+        parser.Year = 2023;
+
+        List<News> newsList = parser.GetNewsList();
+        
+        Console.WriteLine(newsList.Count);
+        News news = parser.GetNews("170870");
+        Console.WriteLine(news.Content.Count);
     }
 }
