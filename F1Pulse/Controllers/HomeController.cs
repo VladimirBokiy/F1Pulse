@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Mvc;
 using F1Pulse.Models;
 
 namespace F1Pulse.Controllers;
-
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
@@ -12,18 +11,22 @@ public class HomeController : Controller
     {
         _logger = logger;
     }
-    
-    
+
+    [Route( "{controller=Home}/{action=Index}")]
+
     public IActionResult Index()
     {
-        return RedirectToAction("Menu", "News");
+        return RedirectToAction("Menu", "News", 
+            new {DateTime.Today.Day, DateTime.Today.Month, DateTime.Today.Year,});
     }
-
+    
+    [Route("Privacy")]
     public IActionResult Privacy()
     {
         return View();
     }
-
+    
+    [Route("Error")]
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {
