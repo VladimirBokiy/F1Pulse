@@ -1,0 +1,39 @@
+﻿@model F1Pulse.Models.Stats.MenuModel
+
+<div class="choice-area text-center d-flex flex-column justify-content-around">
+    <div class="menu-item">
+        <form asp-action="LapTimes" method="get">
+            <button type="submit" class="btn btn-outline-danger" style="font-family: Bahnschrift">Lap Times</button>
+        </form>
+    </div>
+    <div class="menu-item">
+        <form asp-action="LapPositions" method="get">
+            <button type="submit" class="btn btn-outline-danger" style="font-family: Bahnschrift">Lap Positions</button>
+        </form>
+    </div>
+    <div class="menu-item">
+        <form asp-action="DriverStandings" method="get">
+            <button type="submit" class="btn btn-outline-danger" style="font-family: Bahnschrift">Driver Standings</button>
+        </form>
+    </div>  
+    <div class="menu-item">
+        <form asp-action="ConstructorStandings" method="get">
+            <button type="submit" class="btn btn-outline-danger" style="font-family: Bahnschrift">Constructor Standings</button>
+        </form>
+    </div>
+    <div class="menu-item">
+        <form asp-action="RaceResults" method="get">
+            <button type="submit" class="btn btn-outline-danger" style="font-family: Bahnschrift">Race Results</button>
+        </form>
+    </div>
+    <div class="menu-item">
+        <form asp-action="QualifyingResults" method="get">
+            <button type="submit" class="btn btn-outline-danger" style="font-family: Bahnschrift">Qualifying Results</button>
+        </form>
+    </div>
+</div>
+
+@section Scripts
+{
+    <link rel="stylesheet" href="~/css/Stats/Menu.css"/>
+}

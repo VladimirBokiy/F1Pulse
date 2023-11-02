@@ -47,6 +47,34 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Vladimir/Desktop/F1Pulse MVC/F1Pulse/F1Pulse/Views/Stats/ConstructorStandings.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhdHNcQ29uc3RydWN0b3JTdGFuZGluZ3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vladimir/Desktop/F1Pulse MVC/F1Pulse/F1Pulse/Views/Stats/DriverStandings.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhdHNcRHJpdmVyU3RhbmRpbmdzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vladimir/Desktop/F1Pulse MVC/F1Pulse/F1Pulse/Views/Stats/LapPositions.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhdHNcTGFwUG9zaXRpb25zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vladimir/Desktop/F1Pulse MVC/F1Pulse/F1Pulse/Views/Stats/LapTimes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhdHNcTGFwVGltZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vladimir/Desktop/F1Pulse MVC/F1Pulse/F1Pulse/Views/Stats/Menu.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhdHNcTWVudS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vladimir/Desktop/F1Pulse MVC/F1Pulse/F1Pulse/Views/Stats/QualifyingResults.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhdHNcUXVhbGlmeWluZ1Jlc3VsdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vladimir/Desktop/F1Pulse MVC/F1Pulse/F1Pulse/Views/Stats/RaceResults.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhdHNcUmFjZVJlc3VsdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Vladimir/Desktop/F1Pulse MVC/F1Pulse/F1Pulse/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
