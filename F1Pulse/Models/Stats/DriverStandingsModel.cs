@@ -11,7 +11,7 @@ public class DriverStandingsModel
     public DriverStandingsModel()
     {
         List<SelectListItem> yearList = new List<SelectListItem>();
-        for (int i = 2023; i >= 1996; i--)
+        for (int i = DateTime.Today.Year; i >= 1996; i--)
         {
             yearList.Add(new SelectListItem{Value = i.ToString(), Text = i.ToString()});
         }
