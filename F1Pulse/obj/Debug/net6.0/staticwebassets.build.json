@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "BTTZ/hB9/yWloLtMEHIUM4BlCuRBO0kk+4xhJKuVkdY=",
+  "Hash": "1wu9/MKtoWrHtTLbJmWD80Uy2Lq2cyzv1PQcmv8VoLg=",
   "Source": "F1Pulse",
   "BasePath": "_content/F1Pulse",
   "Mode": "Default",
@@ -1239,23 +1239,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\Stats\\RaceResults.css"
-    },
-    {
-      "Identity": "C:\\Users\\Vladimir\\Desktop\\F1Pulse MVC\\F1Pulse\\F1Pulse\\wwwroot\\favicon.ico",
-      "SourceId": "F1Pulse",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Vladimir\\Desktop\\F1Pulse MVC\\F1Pulse\\F1Pulse\\wwwroot\\",
-      "BasePath": "_content/F1Pulse",
-      "RelativePath": "favicon.ico",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
       "Identity": "C:\\Users\\Vladimir\\Desktop\\F1Pulse MVC\\F1Pulse\\F1Pulse\\wwwroot\\img\\f1.ico",

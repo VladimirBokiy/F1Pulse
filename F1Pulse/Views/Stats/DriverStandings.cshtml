@@ -1,18 +1,15 @@
 ﻿@model F1Pulse.Models.Stats.DriverStandingsModel
 
-@{
-    Layout = null;
-}
+<div class="vh-100 ">
+    <div class="choice-area">
+        <select class="form-select" id="year" asp-for="@Model.Year" asp-items="@Model.YearList"></select>
+    </div>
+    
+    <canvas id="driver-standings-chart" style="margin: 5%"></canvas>
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <title>title</title>
-</head>
-<body>
-<div>
-      
 </div>
-</body>
-</html>
+@section Scripts
+{
+    <script src="~/js/Stats/DriverStandings.js"></script>
+    <link rel="stylesheet" href="~/css/Stats/DriverStandings.css"/>
+}
