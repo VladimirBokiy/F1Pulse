@@ -1,18 +1,16 @@
 ﻿@model F1Pulse.Models.Stats.LapPositionsModel
 
-@{
-    Layout = null;
-}
+<div class="vh-100 ">
+    <div class="choice-area">
+        <select class="form-select" id="year" asp-for="@Model.Year" asp-items="@Model.YearList"></select>
+        <select class="form-select" id="round" asp-for="@Model.Round" asp-items="@Model.RoundList"></select>
+    </div>
+    
+    <canvas id="lap-times-chart" style="margin: 5%"></canvas>
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <title>title</title>
-</head>
-<body>
-<div>
-      
 </div>
-</body>
-</html>
+@section Scripts
+{
+    <script src="~/js/Stats/LapPositions.js"></script>
+    <link rel="stylesheet" href="~/css/Stats/LapTimes.css"/>
+}
